@@ -312,11 +312,12 @@ template {
   height: 83px; }
   .header__logo {
     font-family: "FuturaDemiC";
-    font-size: 6.5px;
+    font-size: 7.5px;
     line-height: 16px;
     text-transform: uppercase;
     color: #e3b873;
-    margin-left: 82px; }
+    margin-left: 82px;
+    letter-spacing: 1px; }
   .header__nav-menu {
     list-style: none;
     display: flex;
@@ -344,6 +345,17 @@ template {
     flex-shrink: 1; }
   .header__button {
     margin-right: 100px; }
+    .header__button button {
+      background: #e3b873;
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+      border-radius: 2px;
+      font-family: FuturaDemiC;
+      font-size: 13px;
+      line-height: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 10px 25px; }
 
 .main-info {
   height: 838px; }
@@ -368,7 +380,12 @@ template {
         color: #e3b873;
         align-content: center;
         position: absolute;
-        left: 34px; }
+        left: 34px;
+        text-decoration: none; }
+        .main-info__container__instagram-text__line {
+          position: absolute;
+          border: 13px 10px solid #e3b873;
+          transform: rotate(90deg); }
     .main-info__container__content {
       width: 100%;
       display: flex;
@@ -412,9 +429,33 @@ template {
         position: relative;
         width: 450px;
         z-index: 5; }
-      .main-info__container__wrapper-button {
+      .main-info__container__wrapper__button {
         display: flex;
         position: relative;
         justify-content: space-between;
         width: 440px;
         z-index: 5; }
+        .main-info__container__wrapper__button-button1 button {
+          width: 210px;
+          font-family: "FuturaDemiC";
+          font-size: 13px;
+          line-height: 15px;
+          text-align: center;
+          color: #ffffff;
+          background: #e3b873;
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+          border-radius: 2px;
+          outline: none;
+          padding: 20px 20px; }
+        .main-info__container__wrapper__button-button2 button {
+          width: 210px;
+          font-family: "FuturaDemiC";
+          font-size: 13px;
+          line-height: 15px;
+          text-align: center;
+          color: #ffffff;
+          background: none;
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+          border-radius: 2px;
+          outline: none;
+          padding: 20px 20px; }
