@@ -22,7 +22,7 @@
 
   &__logo {
     font-family: "FuturaDemiC";
-    font-size: 8px;
+    font-size: 6.5px;
     line-height: 16px;
     text-transform: uppercase;
     color: #e3b873;
@@ -39,8 +39,9 @@
         src: url("./fonts/FuturaBookC\ Regular.otf") format("otf");
         font-size: 14px;
         line-height: 16px;
-        margin: 0 0 0 47.09px;
+        margin: 0 0 0 49.09px;
         color: #ffffff;
+        flex-grow: 1;
         &:first-child {
           color: #e3b873;
           margin-left: 48.38px;
@@ -55,7 +56,9 @@
     text-align: right;
     text-decoration-line: underline;
     color: #e3b873;
-    display: inline-block;
+    // display: inline-block;
+    margin-left: 67px;
+    flex-shrink: 1;
   }
   &__button {
     margin-right: 100px;
@@ -67,6 +70,101 @@
 // Main Info
 
 .main-info {
+  height: 838px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &__instagram {
+      writing-mode: vertical-rl;
+      height: 757px;
+      width: 82px;
+      text-align: center;
+      background: #131313;
+      position: relative;
+      z-index: 5;
+
+      &-text {
+        align-self: center;
+        // transform: rotate(90deg);
+        font-family: "FuturaDemiC";
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #e3b873;
+        align-content: center;
+        position: absolute;
+        left: 34px;
+      }
+    }
+    &__content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 757px;
+      background: url("../img/bg-main-info.png") no-repeat;
+      background-size: cover;
+    }
+    &__wrapper {
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: 100px;
+      &-title {
+        font-family: "Yeseva One";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 53px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 5;
+        color: #ffffff;
+        width: 550px;
+        &__rostov {
+          color: #e3b873;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+      }
+      &-subtitle {
+        font-family: FuturaBookC;
+        font-size: 22px;
+        line-height: 35px;
+        color: #ffffff;
+        position: relative;
+        width: 450px;
+        z-index: 5;
+      }
+      &-button {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        width: 440px;
+        z-index: 5;
+        &-button1 {
+        }
+        &-button2 {
+        }
+      }
+    }
+  }
+
+  &__scroll-down {
+    &-button {
+    }
+  }
 }
 
 // Main Info
