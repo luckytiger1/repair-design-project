@@ -1,0 +1,156 @@
+@import "normalize.scss";
+
+// Mixins
+
+@mixin font-futurabookc {
+  font-family: "FuturaBookC Regular";
+}
+@mixin font-yeseva {
+  font-family: "Yeseva One", cursive;
+}
+// Mixins
+
+// Header
+
+.header {
+  color: white;
+  background: #131313;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 83px;
+
+  &__logo {
+    font-family: "FuturaDemiC";
+    font-size: 8px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #e3b873;
+    margin-left: 82px;
+  }
+  &__nav {
+    &-menu {
+      list-style: none;
+      display: flex;
+      margin: 0 0;
+      padding: 0 0;
+      &__item {
+        font-family: "FuturaBookC";
+        src: url("./fonts/FuturaBookC\ Regular.otf") format("otf");
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0 0 0 47.09px;
+        color: #ffffff;
+        &:first-child {
+          color: #e3b873;
+          margin-left: 48.38px;
+        }
+      }
+    }
+  }
+  &__telephone {
+    font-family: FuturaDemiC;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #e3b873;
+    display: inline-block;
+  }
+  &__button {
+    margin-right: 100px;
+  }
+}
+
+// Header
+
+// Main Info
+
+.main-info {
+}
+
+// Main Info
+
+// Completed Projects
+
+.projects {
+}
+
+// Completed Projects
+
+// Online Control
+
+.online-control {
+}
+
+// Online Control
+
+// Repair Types
+
+.repair-types {
+}
+
+// Repair Types
+
+// Fantasies
+
+.fantasies {
+}
+
+// Fantasies
+
+// Design Project
+
+.design-project {
+}
+
+// Design Project
+
+// Goals
+
+.goals {
+}
+
+// Goals
+
+// Our Team
+
+.our-team {
+}
+
+// Our Team
+
+// Our Clients
+
+.our-clients {
+}
+
+// Our Clients
+
+// Question Form
+
+.question-form {
+}
+
+// Question Form
+
+// Phone
+
+.phone {
+}
+
+// Phone
+
+// Map
+
+.map {
+}
+
+// Map
+
+// Footer
+
+.footer {
+}
+
+// Footer
