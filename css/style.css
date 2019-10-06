@@ -358,7 +358,7 @@ template {
       padding: 10px 25px; }
 
 .main-info {
-  height: 838px; }
+  height: 738px; }
   .main-info__container {
     display: flex;
     justify-content: space-between;
@@ -422,7 +422,11 @@ template {
         background-color: rgba(0, 0, 0, 0.7);
         z-index: 2; }
       .main-info__container__wrapper-subtitle {
-        font-family: FuturaBookC;
+        font-family: "FuturaBookC";
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #ffffff;
         font-size: 22px;
         line-height: 35px;
         color: #ffffff;
@@ -459,3 +463,138 @@ template {
           border-radius: 2px;
           outline: none;
           padding: 20px 20px; }
+  .main-info__scroll-down {
+    width: 150px; }
+
+.projects {
+  margin-top: 15px;
+  height: 710px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px 500px 720px 200px;
+  grid-template-rows: 100px 60px 290px 200px 100px;
+  background-color: #131313; }
+  .projects__navbar {
+    width: 750px;
+    height: 50px;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    justify-content: space-between; }
+    .projects__navbar__menu {
+      display: flex;
+      flex-direction: row;
+      list-style: none; }
+      .projects__navbar__menu-item {
+        font-family: "Yeseva One";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1px;
+        text-transform: uppercase;
+        color: #e3b873;
+        margin-left: 15px; }
+  .projects__pictures__wrapper {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    width: 850px;
+    display: flex;
+    margin-left: 50px; }
+    .projects__pictures__wrapper__picture1 {
+      margin-right: 35px; }
+    .projects__pictures__wrapper__picture2 {
+      grid-column-start: 3;
+      grid-row-start: 3;
+      grid-row-end: 4; }
+  .projects__wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    height: 300px; }
+    .projects__wrapper__title {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
+      color: #e3b873; }
+    .projects__wrapper__text {
+      font-family: "FuturaBookC";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: #ffffff;
+      margin-top: 50px;
+      width: 400px;
+      line-height: 28px;
+      letter-spacing: 1px; }
+  .projects__data__container {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 100px 100px; }
+    .projects__data__container__city__title {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: #e3b873; }
+    .projects__data__container__city__text {
+      font-family: "FuturaBookC";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: #ffffff; }
+    .projects__data__container__area__title {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: #e3b873; }
+    .projects__data__container__area__text {
+      font-family: "FuturaBookC";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: #ffffff; }
+    .projects__data__container__time__title {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: #e3b873; }
+    .projects__data__container__time__text {
+      font-family: "FuturaBookC";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: #ffffff; }
+    .projects__data__container__cost__title {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: #e3b873; }
+    .projects__data__container__cost__text {
+      font-family: "FuturaBookC";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      color: #ffffff; }
+  .projects__arrow {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 4;
+    grid-column-start: 2; }

@@ -3,10 +3,23 @@
 // Mixins
 
 @mixin font-futurabookc {
-  font-family: "FuturaBookC Regular";
+  font-family: "FuturaBookC";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
 }
 @mixin font-yeseva {
   font-family: "Yeseva One", cursive;
+}
+@mixin font-yeseve-2nd-block {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #e3b873;
 }
 // Mixins
 
@@ -83,7 +96,7 @@
 // Main Info
 
 .main-info {
-  height: 838px;
+  height: 738px;
 
   &__container {
     display: flex;
@@ -158,7 +171,7 @@
         z-index: 2;
       }
       &-subtitle {
-        font-family: FuturaBookC;
+        @include font-futurabookc;
         font-size: 22px;
         line-height: 35px;
         color: #ffffff;
@@ -207,6 +220,7 @@
   }
 
   &__scroll-down {
+    width: 150px;
     &-button {
     }
   }
@@ -217,6 +231,128 @@
 // Completed Projects
 
 .projects {
+  margin-top: 15px;
+  height: 710px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px 500px 720px 200px;
+  grid-template-rows: 100px 60px 290px 200px 100px;
+  background-color: #131313;
+  &__navbar {
+    width: 750px;
+    height: 50px;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    justify-content: space-between;
+
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+
+      &-item {
+        font-family: "Yeseva One";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1px;
+        text-transform: uppercase;
+        color: #e3b873;
+        margin-left: 15px;
+      }
+    }
+  }
+  &__pictures__wrapper {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    width: 850px;
+    display: flex;
+    margin-left: 50px;
+    &__picture1 {
+      margin-right: 35px;
+    }
+    &__picture2 {
+      // overflow: hidden;
+      grid-column-start: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    height: 300px;
+    &__title {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
+      color: #e3b873;
+    }
+    &__text {
+      @include font-futurabookc;
+      margin-top: 50px;
+      width: 400px;
+      line-height: 28px;
+      letter-spacing: 1px;
+    }
+  }
+  &__data__container {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: grid;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 100px 100px;
+    // grid-row-end: 4;
+    &__city {
+      &__title {
+        @include font-yeseve-2nd-block;
+      }
+      &__text {
+        @include font-futurabookc;
+      }
+    }
+    &__area {
+      &__title {
+        @include font-yeseve-2nd-block;
+      }
+      &__text {
+        @include font-futurabookc;
+      }
+    }
+    &__time {
+      &__title {
+        @include font-yeseve-2nd-block;
+      }
+      &__text {
+        @include font-futurabookc;
+      }
+    }
+    &__cost {
+      &__title {
+        @include font-yeseve-2nd-block;
+      }
+      &__text {
+        @include font-futurabookc;
+      }
+    }
+  }
+  &__arrow {
+    width: 100px;
+    height: 100px;
+    grid-row-start: 4;
+    grid-column-start: 2;
+    &-left {
+    }
+    &-right {
+    }
+  }
 }
 
 // Completed Projects
