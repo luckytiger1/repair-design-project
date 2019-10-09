@@ -397,6 +397,9 @@
     flex-grow: 1;
     display: flex;
     height: 10px;
+    width: 780px;
+    justify-content: space-between;
+    margin-bottom: -20px;
     label {
       display: block;
       margin-left: 15px;
@@ -408,17 +411,20 @@
     &__input {
       input {
         border: none;
+        width: 230px;
         font-family: "FuturaBookC";
         font-size: 18px;
         line-height: 24px;
         color: #363636;
         outline: none;
-        padding: 15px 15px;
+        padding: 5px 15px;
+        border-bottom: 1px solid #000000;
       }
     }
     &__button {
       button {
         width: 210px;
+        height: 55px;
         font-family: "FuturaDemiC";
         font-size: 13px;
         line-height: 15px;
@@ -428,12 +434,25 @@
         box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
         border-radius: 2px;
         outline: none;
-        padding: 15px 15px;
+        padding: 5px 15px;
       }
     }
   }
   &__agreement {
     flex-grow: 1;
+    font-family: "FuturaBookC";
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #181818;
+    input[type="checkbox"] {
+      transform: scale(1.5);
+      padding: 7px;
+      margin-right: 10px;
+    }
+    input[type="checkbox"]:checked {
+      background-color: #e3b873;
+    }
   }
 }
 
@@ -442,6 +461,121 @@
 // Repair Types
 
 .repair-types {
+  display: flex;
+  height: 1000px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  &__title {
+    margin: 80px 0;
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+  }
+  &__catalog {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    &__section1 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      &__properties {
+        position: absolute;
+        bottom: 250px;
+        width: 330px;
+        height: 250px;
+        background-color: #fff;
+        &__title {
+          font-family: "Yeseva One";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 25px;
+          color: #363636;
+          margin-top: 30px;
+          margin-left: 20px;
+        }
+        &__list {
+          margin: 10px 0;
+          &-items {
+            font-family: "FuturaBookC";
+            font-size: 15px;
+            line-height: 25px;
+            color: #959595;
+          }
+        }
+      }
+    }
+    &__section2 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      &__properties {
+        position: absolute;
+        bottom: 250px;
+        width: 330px;
+        height: 250px;
+        background-color: #fff;
+        &__title {
+          font-family: "Yeseva One";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 25px;
+          color: #363636;
+          margin-top: 30px;
+          margin-left: 20px;
+        }
+        &__list {
+          margin: 10px 0;
+          &-items {
+            font-family: "FuturaBookC";
+            font-size: 15px;
+            line-height: 25px;
+            color: #959595;
+          }
+        }
+      }
+    }
+    &__section3 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      &__properties {
+        position: absolute;
+        bottom: 250px;
+        width: 330px;
+        height: 250px;
+        background-color: #fff;
+        &__title {
+          font-family: "Yeseva One";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 25px;
+          color: #363636;
+          margin-top: 30px;
+          margin-left: 20px;
+        }
+        &__list {
+          margin: 10px 0;
+          &-items {
+            font-family: "FuturaBookC";
+            font-size: 15px;
+            line-height: 25px;
+            color: #959595;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Repair Types
