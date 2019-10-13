@@ -62,6 +62,40 @@
   text-transform: uppercase;
 }
 
+@mixin primary-title {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+@mixin goals-subtitle {
+  font-family: "Yeseva One";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+@mixin goals-list-text {
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 18px;
+}
+@mixin goals-text1 {
+  font-family: "FuturaDemiC";
+  font-size: 15px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+@mixin goals-text {
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 25px;
+}
 // Mixins
 
 // Header
@@ -757,14 +791,7 @@ body {
     display: flex;
     position: relative;
     &__circle {
-      display: block;
-      border: 5px solid orange;
-      width: 750px;
-      height: 650px;
-      border-radius: 50%;
-      position: absolute;
-      left: -240px;
-      top: 32px;
+      padding-top: 50px;
     }
     &__text {
       display: flex;
@@ -779,30 +806,26 @@ body {
 
       &__wrapper {
         list-style: none;
-        &-item::before {
-          content: "\2022";
-          color: orange;
-          width: 10em;
-        }
+
         &-item:first-child {
           position: absolute;
-          left: 416px;
-          top: 75px;
+          left: -96px;
+          top: 111px;
         }
         &-item:nth-child(2) {
           position: absolute;
-          left: 526px;
-          top: 225px;
+          left: -25px;
+          top: 233px;
         }
         &-item:nth-child(3) {
           position: absolute;
-          left: 556px;
-          top: 385px;
+          left: 0;
+          top: 395px;
         }
         &-item:last-child {
           position: absolute;
-          left: 458px;
-          top: 564px;
+          left: -65px;
+          top: 546px;
         }
       }
     }
@@ -815,6 +838,7 @@ body {
     &__form {
       display: flex;
       flex-direction: column;
+      margin-top: 100px;
       width: 560px;
       height: 550px;
       justify-content: space-between;
@@ -870,6 +894,7 @@ body {
           font-size: 13px;
           line-height: 15px;
           text-align: center;
+          text-transform: uppercase;
           color: #ffffff;
           background: #e3b873;
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
@@ -1013,7 +1038,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(white 63%, black 50%);
+  background: linear-gradient(#ffffff 63%, #131313 50%);
   padding-bottom: 250px;
   &__title {
     padding-top: 200px;
@@ -1169,6 +1194,70 @@ body {
 // Goals
 
 .goals {
+  display: flex;
+  background-color: #131313;
+  &__block1 {
+    padding-left: 100px;
+    padding-right: 100px;
+    flex-basis: 35%;
+    &__text1 {
+      @include goals-text1();
+      color: #ffffff;
+      padding-bottom: 20px;
+    }
+    &__title {
+      @include primary-title();
+      padding-bottom: 70px;
+    }
+    &__text2 {
+      @include price-text();
+      color: #ffffff;
+      padding-bottom: 20px;
+    }
+    &__subtitle {
+      @include goals-subtitle();
+      padding-bottom: 15px;
+    }
+    &__text3 {
+      @include goals-text();
+      color: #ffffff;
+    }
+    &__slider {
+    }
+  }
+  &__block2 {
+    padding-top: 100px;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      &-item1,
+      &-item2,
+      &-item3,
+      &-item4,
+      &-item5,
+      &-item6 {
+        width: 260px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        @include goals-list-text();
+        color: #fff;
+        span {
+          width: 130px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+      .number {
+        @include goals-text1();
+      }
+    }
+    &__picture {
+      padding-top: 30px;
+      padding-left: 50px;
+    }
+  }
 }
 
 // Goals

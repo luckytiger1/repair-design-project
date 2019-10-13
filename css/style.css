@@ -891,14 +891,7 @@ template {
     display: flex;
     position: relative; }
     .circle-form__block1__container__circle {
-      display: block;
-      border: 5px solid orange;
-      width: 750px;
-      height: 650px;
-      border-radius: 50%;
-      position: absolute;
-      left: -240px;
-      top: 32px; }
+      padding-top: 50px; }
     .circle-form__block1__container__text {
       display: flex;
       flex-direction: column;
@@ -911,26 +904,22 @@ template {
       color: #363636; }
       .circle-form__block1__container__text__wrapper {
         list-style: none; }
-        .circle-form__block1__container__text__wrapper-item::before {
-          content: "\2022";
-          color: orange;
-          width: 10em; }
         .circle-form__block1__container__text__wrapper-item:first-child {
           position: absolute;
-          left: 416px;
-          top: 75px; }
+          left: -96px;
+          top: 111px; }
         .circle-form__block1__container__text__wrapper-item:nth-child(2) {
           position: absolute;
-          left: 526px;
-          top: 225px; }
+          left: -25px;
+          top: 233px; }
         .circle-form__block1__container__text__wrapper-item:nth-child(3) {
           position: absolute;
-          left: 556px;
-          top: 385px; }
+          left: 0;
+          top: 395px; }
         .circle-form__block1__container__text__wrapper-item:last-child {
           position: absolute;
-          left: 458px;
-          top: 564px; }
+          left: -65px;
+          top: 546px; }
   .circle-form__block2__wrapper {
     display: flex;
     flex-direction: column;
@@ -938,6 +927,7 @@ template {
     .circle-form__block2__wrapper__form {
       display: flex;
       flex-direction: column;
+      margin-top: 100px;
       width: 560px;
       height: 550px;
       justify-content: space-between;
@@ -987,6 +977,7 @@ template {
           font-size: 13px;
           line-height: 15px;
           text-align: center;
+          text-transform: uppercase;
           color: #ffffff;
           background: #e3b873;
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
@@ -1088,7 +1079,7 @@ template {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(white 63%, black 50%);
+  background: linear-gradient(#ffffff 63%, #131313 50%);
   padding-bottom: 250px; }
   .design-project__title {
     padding-top: 200px;
@@ -1253,3 +1244,77 @@ template {
         position: absolute;
         bottom: -302px;
         left: 61px; }
+
+.goals {
+  display: flex;
+  background-color: #131313; }
+  .goals__block1 {
+    padding-left: 100px;
+    padding-right: 100px;
+    flex-basis: 35%; }
+    .goals__block1__text1 {
+      font-family: "FuturaDemiC";
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding-bottom: 20px; }
+    .goals__block1__title {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: #e3b873;
+      padding-bottom: 70px; }
+    .goals__block1__text2 {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding-bottom: 20px; }
+    .goals__block1__subtitle {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 23px;
+      text-transform: uppercase;
+      color: #e3b873;
+      padding-bottom: 15px; }
+    .goals__block1__text3 {
+      font-family: "FuturaBookC";
+      font-size: 15px;
+      line-height: 25px;
+      color: #ffffff; }
+  .goals__block2 {
+    padding-top: 100px; }
+    .goals__block2__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly; }
+      .goals__block2__list-item1, .goals__block2__list-item2, .goals__block2__list-item3, .goals__block2__list-item4, .goals__block2__list-item5, .goals__block2__list-item6 {
+        width: 260px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        font-family: "FuturaBookC";
+        font-size: 15px;
+        line-height: 18px;
+        color: #fff; }
+        .goals__block2__list-item1 span, .goals__block2__list-item2 span, .goals__block2__list-item3 span, .goals__block2__list-item4 span, .goals__block2__list-item5 span, .goals__block2__list-item6 span {
+          width: 130px;
+          padding-top: 10px;
+          padding-bottom: 10px; }
+      .goals__block2__list .number {
+        font-family: "FuturaDemiC";
+        font-size: 15px;
+        line-height: 21px;
+        text-transform: uppercase; }
+    .goals__block2__picture {
+      padding-top: 30px;
+      padding-left: 50px; }
