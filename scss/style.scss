@@ -2,6 +2,14 @@
 
 // Mixins
 
+@mixin logo {
+  font-family: "FuturaDemiC";
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #e3b873;
+}
+
 @mixin font-futurabookc {
   font-family: "FuturaBookC";
   font-weight: 400;
@@ -151,6 +159,24 @@
   line-height: 20px;
   display: block;
   color: rgba(255, 255, 255, 0.5);
+}
+@mixin input {
+  border: none;
+  width: 230px;
+  font-family: "FuturaBookC";
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  outline: none;
+  padding: 5px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+}
+@mixin agreement {
+  font-family: "FuturaBookC";
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
 }
 // Mixins
 
@@ -1520,15 +1546,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  background: url(../img/footerbg.png) no-repeat left bottom;
+  background-size: 100% 40%;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 280px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+  }
   &__container {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 900px;
     background-color: #131313;
+    z-index: 5;
     &__title {
       @include title();
       color: #ffffff;
+      padding-top: 40px;
       padding-bottom: 40px;
     }
 
@@ -1547,9 +1587,7 @@ body {
         padding-left: 20px;
         padding-right: 20px;
         input {
-          outline: none;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-          background: transparent;
+          @include input();
         }
       }
     }
@@ -1560,22 +1598,21 @@ body {
       ::placeholder {
         color: #ffffff;
       }
-      padding-bottom: 30px;
       input {
-        outline: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        background: transparent;
-        width: 400px;
-        color: #ffffff;
+        @include input();
+        width: 630px;
       }
+      padding-bottom: 50px;
+      padding-left: 120px;
     }
     &__agreement {
-      padding-bottom: 30px;
-      padding-left: 200px;
-      color: #ffffff;
+      padding-bottom: 40px;
+      padding-left: 320px;
+      @include agreement();
     }
     &__button {
-      padding-left: 240px;
+      padding-left: 345px;
+      padding-bottom: 40px;
       button {
         @include button();
         width: 210px;
@@ -1594,6 +1631,30 @@ body {
 // Phone
 
 .phone {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    @include title;
+    width: 600px;
+    color: #e3b873;
+    padding-bottom: 20px;
+    z-index: 5;
+
+    a {
+      color: inherit;
+    }
+  }
+  &__block2 {
+    display: flex;
+    z-index: 5;
+    &__gmail {
+      padding-right: 10px;
+    }
+    &__instagram {
+    }
+  }
 }
 
 // Phone
@@ -1601,6 +1662,15 @@ body {
 // Map
 
 .map {
+  display: flex;
+  align-items: center;
+  &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+    z-index: 5;
+  }
 }
 
 // Map
@@ -1608,6 +1678,81 @@ body {
 // Footer
 
 .footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #131313;
+  padding-left: 30px;
+  padding-right: 30px;
+  &__logo {
+    @include logo;
+    letter-spacing: 1.5px;
+    padding-top: 14px;
+  }
+  &__navbar {
+    &-list {
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      width: 700px;
+      .menu-item {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: "FuturaBookC";
+        font-size: 14px;
+        line-height: 16px;
+        color: #ffffff;
+      }
+    }
+  }
+  &__tel {
+    padding-top: 13px;
+    a {
+      font-family: "FuturaDemiC";
+      font-size: 14px;
+      line-height: 16px;
+      text-align: right;
+      text-decoration-line: underline;
+      color: #e3b873;
+    }
+  }
+  &__button {
+    padding-top: 6px;
+
+    button {
+      background: #e3b873;
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+      border-radius: 2px;
+      font-family: "FuturaDemiC";
+      font-size: 13px;
+      line-height: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 12px 27px;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+.outer-footer {
+  background: url(../img/footerbg.png) 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2;
+  }
 }
 
 // Footer

@@ -1528,12 +1528,25 @@ template {
 .question-form {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background: url(../img/footerbg.png) no-repeat left bottom;
+  background-size: 100% 40%;
+  position: relative; }
+  .question-form::before {
+    content: "";
+    position: absolute;
+    top: 280px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2; }
   .question-form__container {
     display: flex;
     flex-direction: column;
-    width: 700px;
-    background-color: #131313; }
+    width: 900px;
+    background-color: #131313;
+    z-index: 5; }
     .question-form__container__title {
       font-family: "Yeseva One";
       font-style: normal;
@@ -1543,6 +1556,7 @@ template {
       text-align: center;
       text-transform: uppercase;
       color: #ffffff;
+      padding-top: 40px;
       padding-bottom: 40px; }
     .question-form__container__block1 {
       display: flex;
@@ -1560,11 +1574,19 @@ template {
         .question-form__container__block1__input ::placeholder {
           color: #ffffff; }
         .question-form__container__block1__input input {
+          border: none;
+          width: 230px;
+          font-family: "FuturaBookC";
+          font-size: 18px;
+          line-height: 24px;
+          color: white;
           outline: none;
+          padding: 5px 15px;
           border-bottom: 1px solid rgba(255, 255, 255, 0.15);
           background: transparent; }
     .question-form__container__input {
-      padding-bottom: 30px; }
+      padding-bottom: 50px;
+      padding-left: 120px; }
       .question-form__container__input label {
         font-family: "FuturaBookC";
         font-size: 15px;
@@ -1574,17 +1596,27 @@ template {
       .question-form__container__input ::placeholder {
         color: #ffffff; }
       .question-form__container__input input {
+        border: none;
+        width: 230px;
+        font-family: "FuturaBookC";
+        font-size: 18px;
+        line-height: 24px;
+        color: white;
         outline: none;
+        padding: 5px 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         background: transparent;
-        width: 400px;
-        color: #ffffff; }
+        width: 630px; }
     .question-form__container__agreement {
-      padding-bottom: 30px;
-      padding-left: 200px;
+      padding-bottom: 40px;
+      padding-left: 320px;
+      font-family: "FuturaBookC";
+      font-size: 16px;
+      line-height: 22px;
       color: #ffffff; }
     .question-form__container__button {
-      padding-left: 240px; }
+      padding-left: 345px;
+      padding-bottom: 40px; }
       .question-form__container__button button {
         font-family: "FuturaDemiC";
         font-size: 15px;
@@ -1598,3 +1630,106 @@ template {
         border-radius: 2px;
         outline: none;
         padding: 13px 13px; }
+
+.phone {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .phone__title {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 600px;
+    color: #e3b873;
+    padding-bottom: 20px;
+    z-index: 5; }
+    .phone__title a {
+      color: inherit; }
+  .phone__block2 {
+    display: flex;
+    z-index: 5; }
+    .phone__block2__gmail {
+      padding-right: 10px; }
+
+.map {
+  display: flex;
+  align-items: center; }
+  .map__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+    z-index: 5; }
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #131313;
+  padding-left: 30px;
+  padding-right: 30px; }
+  .footer__logo {
+    font-family: "FuturaDemiC";
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #e3b873;
+    letter-spacing: 1.5px;
+    padding-top: 14px; }
+  .footer__navbar-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 700px; }
+    .footer__navbar-list .menu-item {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-family: "FuturaBookC";
+      font-size: 14px;
+      line-height: 16px;
+      color: #ffffff; }
+  .footer__tel {
+    padding-top: 13px; }
+    .footer__tel a {
+      font-family: "FuturaDemiC";
+      font-size: 14px;
+      line-height: 16px;
+      text-align: right;
+      text-decoration-line: underline;
+      color: #e3b873; }
+  .footer__button {
+    padding-top: 6px; }
+    .footer__button button {
+      background: #e3b873;
+      box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+      border-radius: 2px;
+      font-family: "FuturaDemiC";
+      font-size: 13px;
+      line-height: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 12px 27px;
+      outline: none;
+      border: none; }
+
+.outer-footer {
+  background: url(../img/footerbg.png) 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .outer-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2; }
