@@ -19,15 +19,17 @@
       </div>
       <nav class="header__nav">
         <ul class="header__nav-menu">
-          <li class="header__nav-menu__item">HOME</li>
-          <li class="header__nav-menu__item">PROJECTS</li>
-          <li class="header__nav-menu__item">MEASUREMENT</li>
-          <li class="header__nav-menu__item">TEAM</li>
-          <li class="header__nav-menu__item">REVIEWS</li>
-          <li class="header__nav-menu__item">CONTACTS</li>
+          <li class="header__nav-menu__item"><a href="">HOME</a></li>
+          <li class="header__nav-menu__item"><a href="">PROJECTS</a></li>
+          <li class="header__nav-menu__item"><a href="">MEASUREMENT</a></li>
+          <li class="header__nav-menu__item"><a href="">TEAM</a></li>
+          <li class="header__nav-menu__item"><a href="">REVIEWS</a></li>
+          <li class="header__nav-menu__item"><a href="">CONTACTS</a></li>
         </ul>
       </nav>
-      <div class="header__telephone">+7 (928) 768-32-39</div>
+      <div class="header__telephone">
+        <a href="tel: +7 (928) 768-32-39">+7 (928) 768-32-39</a>
+      </div>
       <div class="header__button">
         <button>Request a call</button>
       </div>
@@ -40,7 +42,7 @@
         <div class="main-info__container__instagram">
           <a href="#" class="main-info__container__instagram-text"
             >INSTAGRAM
-            <span class="main-info__container__instagram-text__line"></span>
+            <hr />
           </a>
         </div>
         <div class="main-info__container__content">
@@ -62,16 +64,20 @@
                 <button>CALCULATE THE COST</button>
               </div>
               <div class="main-info__container__wrapper__button-button2">
-                <button>SUBMIT YOUR APPLICATION</button>
+                <button>
+                  <span class="desktop">SUBMIT YOUR APPLICATION</span>
+                  <span class="mobile">APPLICATION</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="main-info__container__scroll-down">
-        <a href="#" class="main-info__container__scroll-down-button"
-          >Scroll Down</a
-        >
+      <div class="main-info__scroll-down">
+        <div class="main-info__scroll-down-button">
+          <a href="">Scroll Down </a>
+        </div>
+        <img src="./img/scroll-down.svg" alt="scrolldown" />
       </div>
     </section>
     <!-- Main Info -->
@@ -80,9 +86,15 @@
     <section class="projects">
       <nav class="projects__navbar">
         <ul class="projects__navbar__menu">
-          <li class="projects__navbar__menu-item">Rostov-on-Don, Admiral</li>
-          <li class="projects__navbar__menu-item">Sochi Thieves</li>
-          <li class="projects__navbar__menu-item">Rostov-on-Don Patriotic</li>
+          <li class="projects__navbar__menu-item">
+            <a href="">Rostov-on-Don, Admiral</a>
+          </li>
+          <li class="projects__navbar__menu-item">
+            <a href="">Sochi Thieves</a>
+          </li>
+          <li class="projects__navbar__menu-item">
+            <a href="">Rostov-on-Don Patriotic</a>
+          </li>
         </ul>
       </nav>
       <div class="projects__pictures__wrapper">
@@ -137,8 +149,31 @@
         </div>
       </div>
       <div class="projects__arrow">
-        <div class="projects__arrow-left"></div>
-        <div class="projects__arrow-right"></div>
+        <div class="projects__arrow-left">
+          <a href="">
+            <img src="./img/leftarrow.svg" alt="left-arrow" />
+          </a>
+        </div>
+        <div class="projects__arrow-dots">
+          <a href="">
+            <img src="./img/dots.svg" alt="dots" />
+          </a>
+        </div>
+        <div class="projects__arrow-dots">
+          <a href="">
+            <img src="./img/dots.svg" alt="dots" />
+          </a>
+        </div>
+        <div class="projects__arrow-dots">
+          <a href="">
+            <img src="./img/dots.svg" alt="dots" />
+          </a>
+        </div>
+        <div class="projects__arrow-right">
+          <a href="">
+            <img src="./img/rightarrow.svg" alt="right-arrow" />
+          </a>
+        </div>
       </div>
     </section>
     <!-- Completed Projects -->
@@ -157,9 +192,11 @@
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+          class="repair-video"
         ></iframe>
       </div>
       <div class="online-control__repair-text">
+        <hr />
         At each facility, a camera is installed that broadcasts the progress of
         work on the clock. <br />
         At any time, you can go to our website and monitor the progress of work
@@ -174,18 +211,21 @@
           <input id="name" type="text" placeholder="What is your name: " />
         </div>
         <div class="online-control__form__wrapper__input">
-          <label for="phone">Phone</label>
+          <label for="phone"
+            ><span class="desktop">Phone</span
+            ><span class="mobile">Number</span></label
+          >
           <input id="phone" type="text" placeholder="Your phone number: " />
         </div>
         <div class="online-control__form__wrapper__button">
           <button>SUBMIT</button>
         </div>
-      </div>
-      <div class="online-control__agreement">
-        <label
-          ><input type="checkbox" />I agree to the processing of personal
-          data</label
-        >
+        <div class="online-control__agreement">
+          <label
+            ><input type="checkbox" required />I agree to the processing of
+            personal data</label
+          >
+        </div>
       </div>
     </section>
     <!-- Online Control -->
@@ -605,23 +645,27 @@
         <div class="goals__block2__list">
           <div class="goals__block2__list-item1">
             <span class="number">01</span>
-            <span>Departure to room measurements</span>
+            <span><a href="">Departure to room measurements</a> </span>
           </div>
           <div class="goals__block2__list-item2">
-            <span class="number">02</span> <span>Compilation estimates</span>
+            <span class="number">02</span>
+            <span><a href="">Compilation estimates</a></span>
           </div>
           <div class="goals__block2__list-item3">
             <span class="number">03</span>
-            <span>Development project design</span>
+            <span><a href="">Development project design</a></span>
           </div>
           <div class="goals__block2__list-item4">
-            <span class="number">04</span> <span>Purchasing Supplies</span>
+            <span class="number">04</span>
+            <span><a href="">Purchasing Supplies</a></span>
           </div>
           <div class="goals__block2__list-item5">
-            <span class="number">05</span> <span>Repair finishing work</span>
+            <span class="number">05</span>
+            <span><a href="">Repair finishing work</a></span>
           </div>
           <div class="goals__block2__list-item6">
-            <span class="number">06</span> <span>Приемка-сдача работ</span>
+            <span class="number">06</span>
+            <span><a href="">Приемка-сдача работ</a></span>
           </div>
         </div>
         <div class="goals__block2__picture">
@@ -851,7 +895,7 @@
     <!-- Question Form -->
 
     <!-- Phone -->
-    <section class="phone outer-footer">
+    <section class="phone outer-footer mobile-order">
       <div class="phone__title">
         Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel
         <a href="tel">+7 (928) 768 32 29</a>
@@ -868,7 +912,7 @@
     <!-- Phone -->
 
     <!-- Map -->
-    <section class="map outer-footer">
+    <section class="map outer-footer mobile-order">
       <div class="map__wrapper">
         <img src="./img/map.png" alt="map" />
       </div>
@@ -877,16 +921,16 @@
 
     <footer class="footer">
       <div class="footer__logo">IC "Repair Design Project"</div>
-      <div class="footer__navbar">
+      <nav class="footer__navbar">
         <ul class="footer__navbar-list">
-          <li class="menu-item">HOME</li>
-          <li class="menu-item">PROJECTS</li>
-          <li class="menu-item">MEASUREMENT</li>
-          <li class="menu-item">TEAM</li>
-          <li class="menu-item">REVIEWS</li>
-          <li class="menu-item">CONTACTS</li>
+          <li class="menu-item"><a href="">HOME</a></li>
+          <li class="menu-item"><a href="">PROJECTS</a></li>
+          <li class="menu-item"><a href="">MEASUREMENT</a></li>
+          <li class="menu-item"><a href="">TEAM</a></li>
+          <li class="menu-item"><a href="">REVIEWS</a></li>
+          <li class="menu-item"><a href="">CONTACTS</a></li>
         </ul>
-      </div>
+      </nav>
       <div class="footer__tel"><a href="tel">+7 (928) 768-32-39</a></div>
       <div class="footer__button">
         <button>Request a call</button>

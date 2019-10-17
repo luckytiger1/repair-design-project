@@ -328,12 +328,14 @@ template {
       src: url("./fonts/FuturaBookC Regular.otf") format("otf");
       font-size: 14px;
       line-height: 16px;
-      margin: 0 0 0 49.09px;
+      padding-left: 48px;
       color: #ffffff;
       flex-grow: 1; }
-      .header__nav-menu__item:first-child {
-        color: #e3b873;
-        margin-left: 48.38px; }
+      .header__nav-menu__item a {
+        color: #fff;
+        text-decoration: none; }
+      .header__nav-menu__item a:hover {
+        color: #e3b873; }
   .header__telephone {
     font-family: "FuturaDemiC";
     font-size: 14px;
@@ -342,20 +344,28 @@ template {
     text-decoration-line: underline;
     color: #e3b873;
     margin-left: 0px;
-    flex-shrink: 1; }
+    padding-left: 10px;
+    padding-right: 20px; }
+    .header__telephone a {
+      text-decoration: none;
+      color: #e3b873; }
   .header__button {
     margin-right: 100px; }
     .header__button button {
       background: #e3b873;
       box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
       border-radius: 2px;
-      font-family: FuturaDemiC;
+      font-family: "FuturaDemiC";
       font-size: 13px;
       line-height: 15px;
       text-align: center;
       text-transform: uppercase;
       color: #ffffff;
-      padding: 10px 25px; }
+      padding: 10px 25px;
+      outline: none;
+      border: none; }
+    .header__button button:hover {
+      background-color: #f0aa41; }
 
 .main-info {
   height: 738px; }
@@ -382,9 +392,12 @@ template {
         position: absolute;
         left: 34px;
         text-decoration: none; }
-        .main-info__container__instagram-text__line {
+        .main-info__container__instagram-text hr {
           position: absolute;
-          border: 13px 10px solid #e3b873;
+          width: 70px;
+          border: 1.2px solid #e3b873;
+          left: -36px;
+          bottom: -55px;
           transform: rotate(90deg); }
     .main-info__container__content {
       width: 100%;
@@ -450,7 +463,11 @@ template {
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
           border-radius: 2px;
           outline: none;
-          padding: 20px 20px; }
+          padding: 20px 20px;
+          outline: none;
+          border: none; }
+        .main-info__container__wrapper__button-button2 .mobile {
+          display: none; }
         .main-info__container__wrapper__button-button2 button {
           width: 210px;
           font-family: "FuturaDemiC";
@@ -462,9 +479,32 @@ template {
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
           border-radius: 2px;
           outline: none;
-          padding: 20px 20px; }
+          padding: 20px 20px;
+          border: 1px solid white; }
   .main-info__scroll-down {
-    width: 150px; }
+    width: 220px;
+    height: 100px;
+    background-color: #131313;
+    position: absolute;
+    left: 0;
+    top: 785px;
+    z-index: 5;
+    display: flex; }
+    .main-info__scroll-down-button {
+      padding-top: 42px;
+      padding-left: 35px;
+      padding-right: 10px;
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase; }
+      .main-info__scroll-down-button a {
+        color: #ffffff;
+        text-decoration: none; }
+      .main-info__scroll-down-button a:hover {
+        color: #e3b873; }
 
 .projects {
   margin-top: 15px;
@@ -475,7 +515,6 @@ template {
   grid-template-rows: 120px 260px 180px 50px;
   background-color: #131313; }
   .projects__navbar {
-    width: 800px;
     height: 50px;
     grid-column-start: 2;
     grid-row-start: 1;
@@ -492,8 +531,13 @@ template {
         font-size: 14px;
         line-height: 1px;
         text-transform: uppercase;
-        color: #e3b873;
         margin-left: 15px; }
+        .projects__navbar__menu-item a {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.3); }
+        .projects__navbar__menu-item a:hover {
+          text-decoration: underline;
+          color: #e3b873; }
   .projects__pictures__wrapper {
     grid-column-start: 2;
     grid-row-start: 2;
@@ -605,10 +649,18 @@ template {
       color: #ffffff;
       padding-top: 20px; }
   .projects__arrow {
-    width: 100px;
-    height: 100px;
     grid-row-start: 4;
-    grid-column-start: 2; }
+    grid-column-start: 1;
+    display: flex;
+    padding-top: 55px; }
+    .projects__arrow-dots {
+      padding-left: 10px;
+      padding-right: 10px; }
+    .projects__arrow-left {
+      padding-right: 25px;
+      padding-left: 50px; }
+    .projects__arrow-right {
+      padding-left: 25px; }
 
 .online-control {
   background: linear-gradient(to bottom, #131313 45%, white 20%);
@@ -616,7 +668,8 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  padding-top: 100px; }
   .online-control__title {
     display: flex;
     align-items: center;
@@ -627,10 +680,10 @@ template {
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
-    margin: 40px 20px 20px;
     color: #fff; }
   .online-control__repair-icon {
-    margin-bottom: 40px;
+    padding-top: 25px;
+    padding-bottom: 40px;
     z-index: 5; }
   .online-control__video {
     flex-grow: 1; }
@@ -642,21 +695,33 @@ template {
     font-size: 20px;
     line-height: 34px;
     text-align: center;
-    color: #363636; }
+    color: #363636;
+    position: relative; }
+    .online-control__repair-text hr {
+      position: absolute;
+      width: 60px;
+      border: 1.2px solid #e3b873;
+      left: 325px;
+      bottom: 285px; }
   .online-control__form__wrapper {
     flex-grow: 1;
     display: flex;
     height: 10px;
     width: 810px;
     justify-content: space-between;
-    margin-bottom: -20px; }
+    margin-bottom: -20px;
+    flex-wrap: wrap; }
+    .online-control__form__wrapper .mobile {
+      display: none; }
     .online-control__form__wrapper label {
       display: block;
       margin-left: 15px;
       font-family: "FuturaBookC";
       font-size: 15px;
       line-height: 20px;
-      color: rgba(54, 54, 54, 0.5); }
+      color: rgba(54, 54, 54, 0.5);
+      padding-left: 5px;
+      margin: 0; }
     .online-control__form__wrapper__input input {
       border: none;
       width: 230px;
@@ -679,13 +744,17 @@ template {
       box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
       border-radius: 2px;
       outline: none;
-      padding: 5px 15px; }
+      padding: 5px 15px;
+      border: none; }
   .online-control__agreement {
     flex-grow: 1;
     font-family: "FuturaBookC";
     font-size: 16px;
     line-height: 22px;
     color: #181818; }
+    .online-control__agreement label {
+      text-align: center;
+      color: #181818; }
     .online-control__agreement input[type="checkbox"] {
       transform: scale(1.5);
       padding: 7px;
@@ -878,7 +947,6 @@ template {
         z-index: 5; }
 
 .circle-form {
-  height: 730px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -983,6 +1051,7 @@ template {
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
           border-radius: 2px;
           outline: none;
+          border: none;
           padding: 5px 15px; }
     .circle-form__block2__wrapper__save {
       position: relative; }
@@ -1002,10 +1071,9 @@ template {
   display: flex;
   background-image: url(../img/fantasybg.png);
   background-repeat: no-repeat;
-  width: 100%;
-  height: 910px;
-  background-size: 100%;
-  position: relative; }
+  background-size: cover;
+  position: relative;
+  padding-top: 50px; }
   .fantasies::before {
     content: "";
     position: absolute;
@@ -1030,9 +1098,10 @@ template {
       text-transform: uppercase;
       color: #e3b873;
       padding-bottom: 30px;
-      padding-top: 140px; }
+      padding-top: 110px; }
     .fantasies__block1__list__wrapper {
-      padding-right: 145px; }
+      padding-right: 145px;
+      padding-bottom: 60px; }
       .fantasies__block1__list__wrapper-items {
         list-style: none;
         align-self: flex-start; }
@@ -1053,26 +1122,27 @@ template {
     flex-wrap: wrap;
     justify-content: space-evenly;
     z-index: 5;
-    position: relative; }
+    position: relative;
+    padding-right: 210px; }
     .fantasies__block2 img {
       display: block;
       height: auto; }
     .fantasies__block2__picture1 {
       position: absolute;
-      top: -25px;
-      left: 100px; }
+      top: -80px;
+      left: 60px; }
     .fantasies__block2__picture2 {
       position: absolute;
-      top: 580px;
-      left: 100px; }
+      top: 540px;
+      left: 60px; }
     .fantasies__block2__picture3 {
       position: absolute;
-      top: -100px;
-      left: 500px; }
+      top: -120px;
+      left: 460px; }
     .fantasies__block2__picture4 {
       position: absolute;
       top: 220px;
-      left: 500px; }
+      left: 460px; }
 
 .design-project {
   display: flex;
@@ -1319,6 +1389,11 @@ template {
           width: 130px;
           padding-top: 10px;
           padding-bottom: 10px; }
+          .goals__block2__list-item1 span a, .goals__block2__list-item2 span a, .goals__block2__list-item3 span a, .goals__block2__list-item4 span a, .goals__block2__list-item5 span a, .goals__block2__list-item6 span a {
+            text-decoration: none;
+            color: #fff; }
+          .goals__block2__list-item1 span a:hover, .goals__block2__list-item2 span a:hover, .goals__block2__list-item3 span a:hover, .goals__block2__list-item4 span a:hover, .goals__block2__list-item5 span a:hover, .goals__block2__list-item6 span a:hover {
+            color: #e3b873; }
       .goals__block2__list .number {
         font-family: "FuturaDemiC";
         font-size: 15px;
@@ -1421,7 +1496,8 @@ template {
 .our-clients {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
   .our-clients__title {
     font-family: "Yeseva One";
     font-style: normal;
@@ -1694,6 +1770,11 @@ template {
       font-size: 14px;
       line-height: 16px;
       color: #ffffff; }
+      .footer__navbar-list .menu-item a {
+        color: #fff;
+        text-decoration: none; }
+      .footer__navbar-list .menu-item a:hover {
+        color: #e3b873; }
   .footer__tel {
     padding-top: 13px; }
     .footer__tel a {
@@ -1717,7 +1798,10 @@ template {
       color: #ffffff;
       padding: 12px 27px;
       outline: none;
-      border: none; }
+      border: none;
+      transition-duration: 0.4s; }
+    .footer__button button:hover {
+      background-color: #f0aa41; }
 
 .outer-footer {
   background: url(../img/footerbg.png) 100%;
@@ -1733,3 +1817,376 @@ template {
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 2; }
+
+@media screen and (max-width: 1360px) {
+  .fantasies__block2 {
+    padding-right: 450px; }
+    .fantasies__block2 img {
+      width: 100%;
+      height: auto; }
+  .design-project__wrapper__mini__picture, .design-project__wrapper__standard__picture, .design-project__wrapper__full__picture {
+    padding: 0; }
+    .design-project__wrapper__mini__picture img, .design-project__wrapper__standard__picture img, .design-project__wrapper__full__picture img {
+      width: 100%;
+      height: auto; }
+  .our-clients__wrapper {
+    width: 100%; }
+    .our-clients__wrapper__block1, .our-clients__wrapper__block2, .our-clients__wrapper__block3 {
+      width: 200px;
+      padding: 0 80px; }
+      .our-clients__wrapper__block1__text, .our-clients__wrapper__block2__text, .our-clients__wrapper__block3__text {
+        width: 200px; }
+  .our-clients__block3 {
+    padding-right: 0; } }
+
+@media screen and (max-width: 1250px) {
+  .circle-form__block1__container {
+    width: 50%; }
+    .circle-form__block1__container__circle {
+      width: 65%; }
+      .circle-form__block1__container__circle img {
+        padding-right: 230px;
+        padding-top: 20px; }
+    .circle-form__block1__container__text {
+      width: 30%;
+      padding-bottom: 90px; }
+      .circle-form__block1__container__text__wrapper {
+        position: relative; } }
+
+@media screen and (max-width: 1165px) {
+  .projects__pictures__wrapper {
+    overflow: hidden; }
+    .projects__pictures__wrapper__picture1 {
+      margin: 0;
+      padding-left: 10px;
+      padding-right: 50px; }
+    .projects__pictures__wrapper__wrapper__title {
+      padding-left: 0; }
+    .projects__pictures__wrapper__wrapper__text {
+      padding-left: 0; }
+    .projects__pictures__wrapper__data__container {
+      margin: 0; }
+  .projects .goals__block2__picture {
+    padding-left: 0; } }
+
+@media screen and (max-width: 375px) {
+  .header__logo {
+    width: 240px;
+    margin-left: 0; }
+  .header__nav {
+    display: none; }
+  .header__telephone {
+    width: 130px;
+    padding: 0; }
+  .header__button {
+    display: none; }
+  .main-info {
+    height: 500px; }
+    .main-info__container__instagram {
+      display: none; }
+    .main-info__container__content {
+      height: 500px; }
+    .main-info__container__wrapper {
+      margin: 0;
+      justify-content: center;
+      width: 100%; }
+      .main-info__container__wrapper-title {
+        padding-bottom: 30px;
+        padding-left: 20px;
+        width: 300px;
+        font-size: 23px;
+        line-height: 132.83%; }
+      .main-info__container__wrapper-subtitle {
+        padding-left: 20px;
+        padding-bottom: 50px;
+        font-size: 18px;
+        line-height: 135.84%;
+        width: 300px; }
+      .main-info__container__wrapper__button {
+        width: 300px;
+        flex-direction: column;
+        padding-left: 20px; }
+        .main-info__container__wrapper__button-button1 {
+          padding-bottom: 20px;
+          width: 300px; }
+        .main-info__container__wrapper__button-button2 {
+          width: 300px; }
+          .main-info__container__wrapper__button-button2 .desktop {
+            display: none; }
+          .main-info__container__wrapper__button-button2 .mobile {
+            display: block; }
+        .main-info__container__wrapper__button button {
+          width: 320px;
+          padding: 20px 20px; }
+    .main-info__scroll-down {
+      display: none; }
+  .projects {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 100%; }
+    .projects__navbar {
+      display: none; }
+    .projects__pictures__wrapper {
+      height: auto;
+      order: 3; }
+      .projects__pictures__wrapper__picture1 {
+        display: none; }
+      .projects__pictures__wrapper__picture2 img {
+        max-width: 350px;
+        height: 280px; }
+    .projects__wrapper__title {
+      padding: 0;
+      order: 1;
+      text-align: center;
+      padding-top: 30px; }
+    .projects__wrapper__text {
+      order: 2;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 40px; }
+    .projects__data__container {
+      grid-template-columns: 160px 180px;
+      margin: 0;
+      padding-top: 30px;
+      padding-left: 15px;
+      order: 4; }
+    .projects__arrow {
+      display: none; }
+  .online-control {
+    padding-top: 30px;
+    background: #131313;
+    height: 900px; }
+    .online-control__video {
+      position: relative;
+      height: 100px; }
+      .online-control__video .repair-video {
+        width: 350px;
+        height: 300px;
+        position: relative; }
+        .online-control__video .repair-video::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          z-index: 52; }
+    .online-control__repair-text {
+      width: 100%;
+      font-size: 14px;
+      line-height: 169.8%;
+      color: #fff;
+      width: 350px;
+      flex-grow: unset; }
+      .online-control__repair-text br {
+        display: none; }
+      .online-control__repair-text hr {
+        left: 150px;
+        bottom: 130px; }
+    .online-control__form__wrapper {
+      width: 100%;
+      flex-direction: column;
+      padding-top: 40px; }
+      .online-control__form__wrapper__input {
+        padding-left: 15px;
+        order: -4;
+        padding-bottom: 30px; }
+        .online-control__form__wrapper__input .desktop {
+          display: none; }
+        .online-control__form__wrapper__input .mobile {
+          display: block; }
+        .online-control__form__wrapper__input label {
+          color: rgba(255, 255, 255, 0.5);
+          margin-left: 0; }
+        .online-control__form__wrapper__input input {
+          width: 300px;
+          color: #fff;
+          background: transparent;
+          border-bottom: 1px solid #fff; }
+        .online-control__form__wrapper__input ::placeholder {
+          color: #fff; }
+      .online-control__form__wrapper__button {
+        order: 2;
+        padding-left: 12px; }
+        .online-control__form__wrapper__button button {
+          width: 330px;
+          font-size: 15px; }
+    .online-control__agreement {
+      padding-left: 20px;
+      padding-bottom: 15px;
+      flex-grow: unset;
+      order: -2; }
+      .online-control__agreement label {
+        color: #fff;
+        text-align: start; }
+  .repair-types {
+    height: 100%; }
+    .repair-types__title {
+      margin: 0;
+      padding-top: 80px;
+      padding-bottom: 20px; }
+    .repair-types__catalog {
+      flex-direction: column; }
+      .repair-types__catalog__section1, .repair-types__catalog__section2, .repair-types__catalog__section3 {
+        width: 100%;
+        height: 620px; }
+        .repair-types__catalog__section1 img, .repair-types__catalog__section2 img, .repair-types__catalog__section3 img {
+          max-width: 340px; }
+        .repair-types__catalog__section1__properties, .repair-types__catalog__section2__properties, .repair-types__catalog__section3__properties {
+          left: 9px;
+          top: 250px; }
+        .repair-types__catalog__section1__price, .repair-types__catalog__section2__price, .repair-types__catalog__section3__price {
+          left: 9px;
+          bottom: 70px; }
+  .circle-form {
+    display: none; }
+  .fantasies {
+    background: linear-gradient(#fff 60%, #131313 30%);
+    flex-direction: column;
+    height: 400px;
+    padding-top: 0; }
+    .fantasies::before {
+      display: none; }
+    .fantasies__block1 {
+      flex-basis: auto; }
+      .fantasies__block1__list__wrapper {
+        display: none; }
+      .fantasies__block1__title {
+        padding: 0;
+        padding-bottom: 30px;
+        font-size: 22px;
+        line-height: 138.6%;
+        text-align: center; }
+    .fantasies__block2 {
+      padding: 0;
+      background: url(../img/fantasybg.png) no-repeat;
+      background-size: cover;
+      width: 340px;
+      margin-left: 10px; }
+      .fantasies__block2__picture1 {
+        display: none; }
+        .fantasies__block2__picture1 img {
+          max-width: 300px;
+          height: 300px; }
+      .fantasies__block2__picture2 {
+        display: none; }
+      .fantasies__block2__picture3 {
+        display: none; }
+      .fantasies__block2__picture4 {
+        display: none; }
+  .design-project {
+    padding-bottom: 100px;
+    background: #131313; }
+    .design-project__title {
+      padding-top: 20px;
+      color: #fff; }
+    .design-project__text {
+      width: 100%;
+      padding: 0;
+      padding-top: 20px;
+      padding-bottom: 30px;
+      color: #fff;
+      font-size: 15px;
+      line-height: 135.84%; }
+    .design-project__wrapper {
+      flex-direction: column; }
+      .design-project__wrapper__mini, .design-project__wrapper__standard, .design-project__wrapper__full {
+        padding-left: 5px;
+        height: 510px; }
+        .design-project__wrapper__mini img, .design-project__wrapper__standard img, .design-project__wrapper__full img {
+          max-width: 340px; }
+        .design-project__wrapper__mini__text, .design-project__wrapper__standard__text, .design-project__wrapper__full__text {
+          width: 290px;
+          left: 5px;
+          top: 235px; }
+      .design-project__wrapper__mini__price {
+        left: 5px;
+        bottom: 40px; }
+      .design-project__wrapper__standard {
+        height: 580px; }
+        .design-project__wrapper__standard__price {
+          left: 5px;
+          bottom: 40px; }
+      .design-project__wrapper__full__price {
+        left: 5px;
+        top: 616px; }
+  .goals {
+    display: none; }
+  .our-team {
+    background: #131313; }
+    .our-team__text1 {
+      font-size: 15px;
+      line-height: 135.84%; }
+    .our-team__text2 {
+      display: none; }
+    .our-team__photos__wrapper {
+      flex-direction: column; }
+      .our-team__photos__wrapper-block1, .our-team__photos__wrapper-block2, .our-team__photos__wrapper-block3 {
+        height: 500px;
+        padding-right: 35px; }
+        .our-team__photos__wrapper-block1-info, .our-team__photos__wrapper-block2-info, .our-team__photos__wrapper-block3-info {
+          left: 65px;
+          bottom: 115px; }
+        .our-team__photos__wrapper-block1-experience, .our-team__photos__wrapper-block2-experience, .our-team__photos__wrapper-block3-experience {
+          bottom: 60px;
+          height: 40px; }
+  .our-clients {
+    display: none; }
+  .question-form__container {
+    width: 100%; }
+    .question-form__container__block1 {
+      padding-left: 10px;
+      flex-direction: column; }
+      .question-form__container__block1__input {
+        padding: 0;
+        border-bottom: 1px solid #fff;
+        width: 300px; }
+        .question-form__container__block1__input label {
+          margin-bottom: 10px;
+          margin-top: 10px; }
+        .question-form__container__block1__input input {
+          padding: 0; }
+    .question-form__container__input {
+      padding: 0;
+      margin-left: 10px;
+      border-bottom: 1px solid #fff;
+      width: 300px; }
+      .question-form__container__input label {
+        margin-bottom: 10px; }
+      .question-form__container__input input {
+        width: 300px;
+        padding: 0; }
+    .question-form__container__agreement {
+      padding: 0;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      padding-left: 10px; }
+    .question-form__container__button {
+      padding: 0;
+      padding-left: 17px;
+      padding-top: 20px; }
+      .question-form__container__button button {
+        width: 320px;
+        padding: 12px 20px;
+        border: none; }
+  .phone {
+    order: 9;
+    padding-bottom: 50px; }
+    .phone__title {
+      width: 100%; }
+  .map {
+    order: 8;
+    padding-bottom: 0; }
+    .map img {
+      max-width: 330px;
+      height: 330px; }
+  .footer {
+    display: none; }
+  body {
+    display: flex;
+    flex-direction: column; } }
