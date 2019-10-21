@@ -462,10 +462,13 @@ template {
           background: #e3b873;
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
           border-radius: 2px;
+          border: 1px solid white;
           outline: none;
           padding: 20px 20px;
-          outline: none;
-          border: none; }
+          outline: none; }
+        .main-info__container__wrapper__button-button1 button:hover {
+          background: none;
+          border: 1px solid white; }
         .main-info__container__wrapper__button-button2 .mobile {
           display: none; }
         .main-info__container__wrapper__button-button2 button {
@@ -475,11 +478,14 @@ template {
           line-height: 15px;
           text-align: center;
           color: #ffffff;
-          background: none;
+          background: #e3b873;
           box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
           border-radius: 2px;
           outline: none;
           padding: 20px 20px;
+          border: 1px solid white; }
+        .main-info__container__wrapper__button-button2 button:hover {
+          background: none;
           border: 1px solid white; }
   .main-info__scroll-down {
     width: 220px;
@@ -545,7 +551,14 @@ template {
     width: 100%;
     height: 490px;
     display: flex;
-    justify-items: end; }
+    justify-items: end;
+    position: relative; }
+    .projects__pictures__wrapper__sliderbtn {
+      position: absolute;
+      right: 50px;
+      top: 40%; }
+      .projects__pictures__wrapper__sliderbtn a:hover svg g circle {
+        fill: orangered; }
     .projects__pictures__wrapper__picture1 {
       width: 100%;
       margin-left: 58px;
@@ -656,11 +669,17 @@ template {
     .projects__arrow-dots {
       padding-left: 10px;
       padding-right: 10px; }
+      .projects__arrow-dots a:hover svg rect {
+        fill: white; }
     .projects__arrow-left {
       padding-right: 25px;
       padding-left: 50px; }
+      .projects__arrow-left a:hover svg path {
+        fill: red; }
     .projects__arrow-right {
       padding-left: 25px; }
+      .projects__arrow-right a:hover svg path {
+        fill: red; }
 
 .online-control {
   background: linear-gradient(to bottom, #131313 45%, white 20%);
@@ -746,6 +765,8 @@ template {
       outline: none;
       padding: 5px 15px;
       border: none; }
+    .online-control__form__wrapper__button button:hover {
+      background-color: orangered; }
   .online-control__agreement {
     flex-grow: 1;
     font-family: "FuturaBookC";
@@ -1012,6 +1033,13 @@ template {
         align-self: flex-start;
         margin-left: 70px;
         padding-top: 30px; }
+      .circle-form__block2__wrapper__form input[type="checkbox"] {
+        transform: scale(1.5);
+        padding: 7px;
+        margin-right: 10px;
+        margin-top: 15px; }
+      .circle-form__block2__wrapper__form input[type="checkbox"]:checked {
+        background-color: #e3b873; }
       .circle-form__block2__wrapper__form__title {
         font-family: "FuturaDemiC";
         font-size: 20px;
@@ -1053,6 +1081,8 @@ template {
           outline: none;
           border: none;
           padding: 5px 15px; }
+        .circle-form__block2__wrapper__form__button button:hover {
+          background-color: orangered; }
     .circle-form__block2__wrapper__save {
       position: relative; }
       .circle-form__block2__wrapper__save span {
@@ -1690,6 +1720,13 @@ template {
       font-size: 16px;
       line-height: 22px;
       color: #ffffff; }
+      .question-form__container__agreement input[type="checkbox"] {
+        transform: scale(1.5);
+        padding: 7px;
+        margin-right: 10px;
+        margin-top: 15px; }
+      .question-form__container__agreement input[type="checkbox"]:checked {
+        background-color: #e3b873; }
     .question-form__container__button {
       padding-left: 345px;
       padding-bottom: 40px; }
@@ -1706,6 +1743,8 @@ template {
         border-radius: 2px;
         outline: none;
         padding: 13px 13px; }
+      .question-form__container__button button:active {
+        background-color: orangered; }
 
 .phone {
   padding-top: 60px;
@@ -1731,6 +1770,10 @@ template {
     z-index: 5; }
     .phone__block2__gmail {
       padding-right: 10px; }
+      .phone__block2__gmail a:hover svg circle {
+        fill: orangered; }
+    .phone__block2__instagram a:hover svg circle {
+      fill: orangered; }
 
 .map {
   display: flex;
@@ -1801,7 +1844,7 @@ template {
       border: none;
       transition-duration: 0.4s; }
     .footer__button button:hover {
-      background-color: #f0aa41; }
+      background-color: orangered; }
 
 .outer-footer {
   background: url(../img/footerbg.png) 100%;
@@ -1853,21 +1896,30 @@ template {
       .circle-form__block1__container__text__wrapper {
         position: relative; } }
 
-@media screen and (max-width: 1165px) {
+@media screen and (max-width: 1170px) {
   .projects__pictures__wrapper {
     overflow: hidden; }
     .projects__pictures__wrapper__picture1 {
       margin: 0;
       padding-left: 10px;
       padding-right: 50px; }
-    .projects__pictures__wrapper__wrapper__title {
-      padding-left: 0; }
-    .projects__pictures__wrapper__wrapper__text {
-      padding-left: 0; }
-    .projects__pictures__wrapper__data__container {
-      margin: 0; }
-  .projects .goals__block2__picture {
+  .projects__wrapper__title {
+    padding-left: 0; }
+  .projects__wrapper__text {
+    padding-left: 0;
+    width: 100%; }
+  .projects__data__container {
+    margin: 0;
+    width: 100%; }
+  .goals__block2__picture {
     padding-left: 0; } }
+
+@media screen and (max-width: 970px) {
+  .header__nav-menu__item {
+    padding-left: 30px; }
+  .header__telephone {
+    padding-left: 30px;
+    padding-right: 30px; } }
 
 @media screen and (max-width: 375px) {
   .header__logo {
@@ -1931,6 +1983,8 @@ template {
     .projects__pictures__wrapper {
       height: auto;
       order: 3; }
+      .projects__pictures__wrapper__sliderbtn {
+        display: none; }
       .projects__pictures__wrapper__picture1 {
         display: none; }
       .projects__pictures__wrapper__picture2 img {
