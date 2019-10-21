@@ -209,7 +209,7 @@ body {
       padding: 0 0;
       &__item {
         font-family: "FuturaBookC";
-        src: url("./fonts/FuturaBookC\ Regular.otf") format("otf");
+        src: url("./fonts/FuturaBookC/ Regular.otf") format("otf");
         font-size: 14px;
         line-height: 16px;
         padding-left: 48px;
@@ -312,7 +312,7 @@ body {
       display: flex;
       align-items: center;
       height: 757px;
-      background: url("../img/bg-main-info.png") no-repeat;
+      background: url("../assets/img/bg-main-info.png") no-repeat;
       background-size: cover;
     }
     &__wrapper {
@@ -977,7 +977,7 @@ body {
   align-items: center;
   padding-bottom: 150px;
   &__block1__container {
-    background-image: url(../img/circlebg.png);
+    background-image: url(../assets/img/circlebg.png);
     background-repeat: no-repeat;
     width: 150%;
     height: 700px;
@@ -1136,7 +1136,7 @@ body {
 
 .fantasies {
   display: flex;
-  background-image: url(../img/fantasybg.png);
+  background-image: url(../assets/img/fantasybg.png);
   background-repeat: no-repeat;
   // width: 100%;
   // height: 910px;
@@ -1427,6 +1427,17 @@ body {
         bottom: 75px;
       }
     }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      svg path {
+        fill: orangered;
+      }
+      svg rect {
+        fill: orangered;
+      }
+    }
     &__text2 {
       @include price-text();
       color: #ffffff;
@@ -1683,7 +1694,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(../img/footerbg.png) no-repeat left bottom;
+  background: url(../assets/img/footerbg.png) no-repeat left bottom;
   background-size: 100% 40%;
   position: relative;
   &::before {
@@ -1908,7 +1919,7 @@ body {
 }
 
 .outer-footer {
-  background: url(../img/footerbg.png) 100%;
+  background: url(../assets/img/footerbg.png) 100%;
   background-size: cover;
   background-repeat: no-repeat;
   // background-attachment: fixed;
@@ -2339,7 +2350,7 @@ body {
     }
     &__block2 {
       padding: 0;
-      background: url(../img/fantasybg.png) no-repeat;
+      background: url(../assets/img/fantasybg.png) no-repeat;
       background-size: cover;
       width: 340px;
       margin-left: 10px;

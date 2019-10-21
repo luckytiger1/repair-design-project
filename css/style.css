@@ -325,7 +325,7 @@ template {
     padding: 0 0; }
     .header__nav-menu__item {
       font-family: "FuturaBookC";
-      src: url("./fonts/FuturaBookC Regular.otf") format("otf");
+      src: url("./fonts/FuturaBookC/ Regular.otf") format("otf");
       font-size: 14px;
       line-height: 16px;
       padding-left: 48px;
@@ -404,7 +404,7 @@ template {
       display: flex;
       align-items: center;
       height: 757px;
-      background: url("../img/bg-main-info.png") no-repeat;
+      background: url("../assets/img/bg-main-info.png") no-repeat;
       background-size: cover; }
     .main-info__container__wrapper {
       height: 600px;
@@ -973,7 +973,7 @@ template {
   align-items: center;
   padding-bottom: 150px; }
   .circle-form__block1__container {
-    background-image: url(../img/circlebg.png);
+    background-image: url(../assets/img/circlebg.png);
     background-repeat: no-repeat;
     width: 150%;
     height: 700px;
@@ -1099,7 +1099,7 @@ template {
 
 .fantasies {
   display: flex;
-  background-image: url(../img/fantasybg.png);
+  background-image: url(../assets/img/fantasybg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1375,6 +1375,12 @@ template {
         border: 1.2px solid #e3b873;
         left: 220px;
         bottom: 75px; }
+    .goals__block1 a {
+      text-decoration: none; }
+    .goals__block1 a:hover svg path {
+      fill: orangered; }
+    .goals__block1 a:hover svg rect {
+      fill: orangered; }
     .goals__block1__text2 {
       font-family: "Yeseva One";
       font-style: normal;
@@ -1635,7 +1641,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(../img/footerbg.png) no-repeat left bottom;
+  background: url(../assets/img/footerbg.png) no-repeat left bottom;
   background-size: 100% 40%;
   position: relative; }
   .question-form::before {
@@ -1847,7 +1853,7 @@ template {
       background-color: orangered; }
 
 .outer-footer {
-  background: url(../img/footerbg.png) 100%;
+  background: url(../assets/img/footerbg.png) 100%;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
@@ -2118,7 +2124,7 @@ template {
         text-align: center; }
     .fantasies__block2 {
       padding: 0;
-      background: url(../img/fantasybg.png) no-repeat;
+      background: url(../assets/img/fantasybg.png) no-repeat;
       background-size: cover;
       width: 340px;
       margin-left: 10px; }
