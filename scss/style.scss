@@ -484,7 +484,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 35% 65%;
-  grid-template-rows: 120px 260px 180px 50px;
+  grid-template-rows: 120px 1fr 180px 50px;
   background-color: #131313;
   &__navbar {
     height: 50px;
@@ -840,7 +840,7 @@
         position: absolute;
         top: 300px;
         left: 67px;
-        width: 310px;
+        width: 308px;
         height: 250px;
         background-color: #fff;
         &__title {
@@ -900,7 +900,7 @@
         position: absolute;
         top: 300px;
         left: 67px;
-        width: 310px;
+        width: 308px;
         height: 250px;
         background-color: #fff;
         &__title {
@@ -960,7 +960,7 @@
         position: absolute;
         top: 300px;
         left: 67px;
-        width: 310px;
+        width: 308px;
         height: 250px;
         background-color: #fff;
         &__title {
@@ -2121,7 +2121,7 @@
   }
   .goals {
     &__block1 {
-      padding-left: 20px;
+      padding-left: 19px;
     }
     &__block2 {
       &__picture {
@@ -2184,7 +2184,7 @@
           left: 58px;
         }
         padding-left: 25px;
-        padding-right: 25px;
+        padding-right: 23px;
       }
     }
   }
@@ -2306,7 +2306,7 @@
       &__picture3,
       &__picture4 {
         img {
-          width: 275px;
+          width: 250px;
         }
       }
     }
@@ -2374,7 +2374,7 @@
       &-block1,
       &-block2,
       &-block3 {
-        padding: 10px;
+        padding: 5px;
         &-info {
           left: 10%;
         }
@@ -2403,8 +2403,9 @@
   .projects {
     &__navbar {
       &__menu {
-        width: 100%;
+        width: 90%;
         &-item {
+          padding-left: 10px;
           margin: 0;
         }
       }
@@ -2521,7 +2522,7 @@
             padding-left: 0;
           }
         }
-        padding: 4%;
+        padding-left: 4%;
         &__area {
           width: 120px;
         }
@@ -2678,6 +2679,20 @@
       }
     }
   }
+  .our-clients {
+    &__wrapper {
+      flex-direction: column;
+      &__block1,
+      &__block2,
+      &__block3 {
+        padding: 0 80px;
+      }
+      &__block1,
+      &__block2 {
+        margin-bottom: 30px;
+      }
+    }
+  }
 
   .goals {
     &__block2 {
@@ -2766,21 +2781,29 @@
   }
 }
 
-@media screen and (max-width: 790px) {
-  .our-clients {
+@media screen and (max-width: 750px) {
+  .projects {
     &__wrapper {
-      flex-wrap: wrap;
-      &__block3 {
-        margin-top: 50px;
+      &__text {
+        // padding-bottom: 30px;
       }
     }
   }
 }
-
 @media screen and (max-width: 740px) {
   .main-info {
     &__container {
       &__instagram {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .online-control {
+    &__repair-text {
+      width: 100%;
+      br {
         display: none;
       }
     }
@@ -2827,6 +2850,17 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  .fantasies {
+    &__block1 {
+      flex-basis: unset;
+      align-items: center;
+    }
+    &__block2 {
+      display: none;
+    }
+  }
+}
 @media screen and (max-width: 630px) {
   .header {
     &__nav {
@@ -2840,8 +2874,25 @@
       width: 100%;
     }
   }
+  .question-form {
+    &__container {
+      &__block1 {
+        &__input {
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 590px) {
+  .our-team {
+    &__text2 {
+      width: 100%;
+      br {
+        display: none;
+      }
+    }
+  }
   .question-form {
     &__container {
       &__block1 {
@@ -2895,6 +2946,11 @@
   }
 }
 @media screen and (max-width: 493px) {
+  .goals {
+    &__block1 {
+      padding-right: 0;
+    }
+  }
   .our-clients {
     &__wrapper {
       &__block2 {
@@ -2909,6 +2965,18 @@
   }
 }
 @media screen and (max-width: 470px) {
+  .projects {
+    grid-template-columns: 40% 60%;
+    &__wrapper {
+      grid-row-start: 1;
+      &__title {
+        padding-top: 50px;
+      }
+      &__text {
+        padding-top: 0;
+      }
+    }
+  }
   .main-info {
     &__container {
       &__wrapper {
@@ -2921,6 +2989,52 @@
           }
         }
       }
+    }
+  }
+  .repair-types {
+    &__catalog {
+      &__section1,
+      &__section2,
+      &__section3 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .projects {
+    &__navbar {
+      &__menu {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .circle-form {
+    &__block2 {
+      &__wrapper {
+        &__form {
+          &__input {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .our-clients {
+    &__wrapper {
+      &__block1,
+      &__block2,
+      &__block3 {
+        padding: 0 50px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 385px) {
+  .goals {
+    &__block1 {
+      padding-left: unset;
     }
   }
 }
